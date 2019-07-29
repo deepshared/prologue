@@ -1,4 +1,5 @@
 {-# LANGUAGE NoMonomorphismRestriction #-} -- FIXME: remove
+{-# LANGUAGE NoStarIsType #-}
 
 module Prologue (module Prologue, module X) where
 

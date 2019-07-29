@@ -10,6 +10,7 @@
 {-# LANGUAGE RecursiveDo               #-}
 {-# LANGUAGE AllowAmbiguousTypes       #-}
 {-# LANGUAGE MultiWayIf                #-}
+{-# LANGUAGE NoStarIsType              #-}
 
 module Prologue_old (
     module Prologue_old,

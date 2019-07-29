@@ -1,0 +1,105 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.31.2.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: e58edd9d4bcd8d0d6eeafd48e0cb51834f7607c50658545eaf67f34e39b40683
+
+name:           prologue
+version:        2.0.3
+synopsis:       Better, more general Prelude exporting common utilities.
+description:    Replacement for the Haskell's Prelude, exposing more commonly used functions and patching old GHC ones to behave in the newest GHC's way.
+category:       control
+stability:      experimental
+homepage:       https://github.com/wdanilo/prologue
+bug-reports:    https://github.com/wdanilo/prologue/issues
+author:         Wojciech Danilo
+maintainer:     Wojciech Danilo <wojciech.danilo@gmail.com>
+copyright:      Copyright (C) 2014 Wojciech Danilo
+license:        Apache-2.0
+license-file:   LICENSE
+build-type:     Simple
+
+source-repository head
+  type: git
+  location: git://github.com/wdanilo/prologue.git
+
+library
+  exposed-modules:
+      Data.Default.Instances.Missing
+      Data.String.Class
+      Data.Tuple.Curry.Total
+      Data.Typeable.Proxy.Abbr
+      Prologue
+      Prologue.Control.DeepSeq
+      Prologue.Control.Error
+      Prologue.Control.Monad
+      Prologue.Control.Monad.IO
+      Prologue.Control.Monad.Primitive
+      Prologue.Control.Monad.Trans
+      Prologue.Data.Basic
+      Prologue.Data.Bifunctor
+      Prologue.Data.Default
+      Prologue.Data.Either
+      Prologue.Data.Foldable
+      Prologue.Data.Ix
+      Prologue.Data.Maybe
+      Prologue.Data.Num
+      Prologue.Data.Pointed
+      Prologue.Data.Show
+      Prologue.Data.String.QQ
+      Prologue.Data.Traversable
+      Prologue.Data.Tuple
+      Prologue.Data.Tuple_old
+      Prologue.Data.Typeable
+      Prologue.Data.Typeable_old
+      Prologue.Debug.Placeholders
+      Prologue.Placeholders_old
+      Prologue.Prim
+      Prologue.Text.Show
+      Prologue.Unsafe
+      Prologue_old
+  other-modules:
+      Paths_prologue
+  hs-source-dirs:
+      src
+  default-extensions: ScopedTypeVariables TypeApplications ConstraintKinds DataKinds DefaultSignatures DeriveDataTypeable DeriveFoldable DeriveFunctor DeriveGeneric DeriveTraversable DoAndIfThenElse EmptyDataDecls FlexibleContexts FlexibleInstances GeneralizedNewtypeDeriving InstanceSigs LambdaCase MultiParamTypeClasses NoImplicitPrelude OverloadedStrings StandaloneDeriving TemplateHaskell TupleSections TypeFamilies TypeOperators ViewPatterns MultiWayIf
+  ghc-options: -Wall -O2
+  build-depends:
+      OneTuple
+    , base
+    , bifunctors
+    , binary
+    , comonad
+    , cond
+    , container
+    , convert
+    , data-default
+    , data-layer
+    , deepseq
+    , either
+    , errors
+    , exceptions
+    , functor-utils
+    , ghc-prim
+    , impossible
+    , lens
+    , lens-utils
+    , monoid
+    , mtl
+    , neat-interpolation
+    , placeholders
+    , pointed
+    , pretty-show
+    , primitive
+    , raw-strings-qq
+    , string-qq
+    , template-haskell
+    , text
+    , transformers
+    , transformers-base
+    , tuple
+    , typelevel
+    , vector
+  default-language: Haskell2010
