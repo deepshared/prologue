@@ -63,7 +63,7 @@ import Type.Applicative           as X (type (<$>), type (<*>))
 import Type.Error_old                 as X
 import Control.Monad.Catch        as X (MonadMask, MonadCatch, MonadThrow, throwM, catch, mask, uninterruptibleMask, mask_, uninterruptibleMask_, catchAll, catchIOError, catchJust, catchIf)
 import Text.Read                  as X (readPrec) -- new style Read class implementation
-import Data.Kind                  as X (Type, Constraint, type (★), type (*))
+import Data.Kind                  as X (Type, Constraint)
 import Data.Constraints           as X (Constraints)
 import Unsafe.Coerce              as X (unsafeCoerce)
 import Prologue.Data.Typeable_old as X
@@ -354,7 +354,7 @@ maybeSplitAt i a = (,) <$> maybeTake i a <*> maybeDrop i a
 
 -- === MapM === ---
 
-type family Traversables (lst :: [* -> *]) :: Constraint where
+type family Traversables (lst :: [Type -> Type]) :: Constraint where
     Traversables '[]       = ()
     Traversables (t ': ts) = (Traversable t, Traversables ts)
 
